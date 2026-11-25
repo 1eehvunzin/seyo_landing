@@ -120,7 +120,10 @@
       s.innerHTML = '<i style="--i:0">세</i><i style="--i:1">요</i>';
       frag.append(s);
     });
-    node.replaceWith(frag);
+    // in flex/grid parents (buttons) each node would become its own item and get the gap — keep the phrase together
+    const disp = getComputedStyle(node.parentElement).display;
+    if (/flex|grid/.test(disp)) { const wrap = document.createElement('span'); wrap.append(frag); node.replaceWith(wrap); }
+    else node.replaceWith(frag);
   });
   const seyos = document.querySelectorAll('.seyo');
   if ('IntersectionObserver' in window) {

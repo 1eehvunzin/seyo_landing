@@ -130,7 +130,9 @@ button { font: inherit; }
 .device__screen b:nth-child(3) { width: 65%; }
 .device--laptop { left: 30%; top: 50px; width: 40%; height: 288px; border-radius: 16px; }
 .device--laptop .device__screen { inset: 12px; border-radius: 8px; }
-.device--laptop + .laptop-base { position: absolute; left: 27.5%; top: 362px; width: 45%; height: 14px; border-radius: 8px; background: #d2d2d7; }
+.device--laptop + .laptop-base { position: absolute; left: 28%; top: 338px; width: 44%; height: 12px; border-radius: 2px 2px 12px 12px; background: linear-gradient(#e8e8ed, #c7c7cc); box-shadow: 0 8px 16px rgba(0, 0, 0, .08); }
+.device--laptop + .laptop-base::before { content: ""; position: absolute; left: 50%; top: 0; width: 14%; height: 5px; margin-left: -7%; border-radius: 0 0 6px 6px; background: #b8b8be; }
+.device--ipad, .device--phone { z-index: 2; }
 .device--ipad { left: 10%; top: 116px; width: 20%; height: 288px; border-radius: 24px; }
 .device--ipad .device__screen { inset: 11px; border-radius: 14px; }
 .device--phone { left: 73%; top: 141px; width: 11%; height: 244px; border-radius: 26px; }
@@ -327,7 +329,7 @@ button { font: inherit; }
   .meta { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
   .devices { height: 260px; }
   .device--laptop { top: 30px; height: 190px; }
-  .device--laptop + .laptop-base { top: 228px; }
+  .device--laptop + .laptop-base { top: 220px; }
   .device--ipad { top: 70px; height: 180px; }
   .device--phone { top: 90px; height: 150px; }
   .teaser__thumbs { width: 100%; max-width: 520px; transform: scale(.82); transform-origin: left top; }
