@@ -141,7 +141,8 @@ button { font: inherit; }
 .tag--blue { background: var(--blue); }
 
 /* ───────── works teaser ───────── */
-.teaser { display: flex; align-items: center; justify-content: space-between; gap: 48px; }
+.teaser { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 56px 48px; }
+.teaser__text { flex: 1 1 380px; }
 .teaser__text { display: grid; gap: 14px; }
 .teaser__text .btn { justify-self: start; margin-top: 18px; }
 .teaser__thumbs { position: relative; width: 520px; height: 320px; flex: none; }
@@ -288,7 +289,6 @@ button { font: inherit; }
 
 /* ───────── responsive ───────── */
 @media (max-width: 1100px) {
-  .teaser { flex-direction: column; align-items: flex-start; }
   .bubble:nth-child(n+5) { display: none; }
 }
 @media (max-width: 860px) {
