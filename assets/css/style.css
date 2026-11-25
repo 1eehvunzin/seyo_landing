@@ -287,6 +287,13 @@ button { font: inherit; }
   .js .reveal.is-in { opacity: 1; transform: none; }
 }
 
+/* "세요" highlight: white (hidden) by default, a pink→blue marker sweeps in when it scrolls into view */
+.seyo { border-radius: .12em; padding: 0 .04em; background: linear-gradient(90deg, var(--pink), var(--blue)) no-repeat 0 88% / 100% 42%; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .seyo { color: #fff; background-size: 0% 42%; transition: background-size .9s cubic-bezier(.22, 1, .36, 1), color .5s ease .25s; }
+  .js .seyo.is-on { color: inherit; background-size: 100% 42%; }
+}
+
 /* ───────── responsive ───────── */
 @media (max-width: 1100px) {
   .bubble:nth-child(n+5) { display: none; }

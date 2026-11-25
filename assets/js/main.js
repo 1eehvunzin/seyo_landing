@@ -101,6 +101,17 @@
     tr.addEventListener('click', () => { location.href = tr.dataset.href; });
   });
 
+  /* ---------- "세요" highlight ---------- */
+  const seyos = document.querySelectorAll('.seyo');
+  if ('IntersectionObserver' in window) {
+    const so = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('is-on'), 250); so.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -20% 0px', threshold: 1 });
+    seyos.forEach(el => so.observe(el));
+  } else {
+    seyos.forEach(el => el.classList.add('is-on'));
+  }
+
   /* ---------- reveal ---------- */
   const els = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
