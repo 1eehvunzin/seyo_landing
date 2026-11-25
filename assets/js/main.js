@@ -85,10 +85,12 @@
       if (!child) return;
       el.style.transform = 'none';
       const natural = child.offsetWidth;
-      const target = box.clientWidth * parseFloat(el.dataset.fit);
-      const max = parseFloat(el.dataset.max || '1');
+      const mobile = window.innerWidth <= 860;
+      const ratio = mobile ? 1.35 : parseFloat(el.dataset.fit);
+      const target = box.clientWidth * ratio;
+      const max = mobile ? 2 : parseFloat(el.dataset.max || '1');
       const s = Math.min(max, target / natural);
-      el.style.transform = el.classList.contains('fit') ? `translateX(-50%) scale(${s})` : `scale(${s})`;
+      el.style.transform = el.classList.contains('fit') && !mobile ? `translateX(-50%) scale(${s})` : `scale(${s})`;
       el.style.width = natural + 'px';
     });
   }

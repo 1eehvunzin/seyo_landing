@@ -309,6 +309,10 @@ button { font: inherit; }
 }
 @keyframes seyo-shimmer { from { background-position: 0 0; } to { background-position: 100% 0; } }
 
+/* physics bubbles (assets/js/bubbles.js) */
+.cover.is-physics .bubble { display: block; left: 0; top: 0; will-change: transform; touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; }
+.cover.is-physics .bubble.is-grabbed { cursor: grabbing; box-shadow: 0 0 0 1px var(--line), 0 14px 30px rgba(0, 0, 0, .12); }
+
 /* ───────── responsive ───────── */
 @media (max-width: 1100px) {
   .bubble:nth-child(n+5) { display: none; }
@@ -337,6 +341,62 @@ button { font: inherit; }
   .works-count { font-size: 44px; }
   .index th:nth-child(4), .index td:nth-child(4) { display: none; }
   .footer__inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ───────── mobile polish (≤860px only; desktop untouched) ───────── */
+@media (max-width: 860px) {
+  .section { padding-block: 88px; }
+  .section-head { margin-bottom: 40px; }
+  .nav__inner { height: 56px; }
+  .nav .btn--sm { height: 34px; padding: 0 14px; font-size: 13px; }
+  /* hero */
+  .cover { height: 300px; margin: 4px 12px 0; }
+  .bubble { font-size: 13px; padding: 9px 14px; }
+  .cover.is-physics .bubble:nth-child(n+5) { display: none; }
+  .hero__col .h1 { font-size: 34px; }
+  .hero__col .lead { font-size: 16px; }
+  .callout { gap: 10px; padding: 18px; }
+  .callout p { font-size: 15px; }
+  /* orbit: smaller sphere, checked pills first, faded after */
+  .orbit__stage { padding-top: 250px; gap: 10px; }
+  .orbit__stage .sphere { width: 210px; height: 210px; margin-left: -105px; top: 115px; margin-top: -105px; }
+  .orbit__stage .sphere [data-render="star"] { width: 140px !important; height: 140px !important; }
+  .sphere__text img { height: 38px; }
+  .pill--on { font-size: 15px; padding: 12px 18px; order: 1; }
+  .pill--on::after { width: 20px; height: 20px; top: -6px; right: -6px; }
+  .pill--off { font-size: 13px; padding: 9px 14px; order: 2; }
+  /* request window */
+  .chat { padding: 18px; gap: 12px; }
+  .msg { font-size: 15px; padding: 14px 16px; }
+  .chip { font-size: 13px; padding: 5px 11px; }
+  /* devices: keep real proportions */
+  .devices { height: 230px; border-radius: 24px; }
+  .device--laptop { left: 21%; width: 58%; top: 28px; height: 150px; border-radius: 10px; }
+  .device--laptop .device__screen { inset: 7px; border-radius: 5px; padding: 10px; gap: 7px; }
+  .device--laptop + .laptop-base { left: 18%; width: 64%; top: 176px; height: 9px; }
+  .device--ipad { left: 5%; width: 25%; top: 70px; height: 130px; border-radius: 14px; }
+  .device--ipad .device__screen { inset: 6px; border-radius: 9px; padding: 9px; gap: 6px; }
+  .device--phone { left: 76%; width: 15%; top: 92px; height: 112px; border-radius: 16px; }
+  .device--phone .device__screen { inset: 4px; border-radius: 12px; padding: 8px 6px; gap: 5px; }
+  .device__screen b { height: 6px; }
+  .tags { margin-top: 28px; }
+  /* portfolio teaser: thumbs fit the screen */
+  .teaser__thumbs { width: 520px; height: 320px; transform: scale(.64); transform-origin: left top; margin-bottom: -115px; }
+  /* pricing */
+  .plan { padding: 36px 28px; }
+  .plan__price { font-size: 34px; }
+  .ending { padding-block: 96px; }
+  .lockup { width: 82%; }
+  /* works page */
+  .works-head { margin-bottom: 32px; }
+  .project { gap: 48px; }
+  .project__title p { font-size: 16px; }
+  .meta { margin-top: 24px; }
+  .meta dd { font-size: 15px; }
+  .brief blockquote { font-size: 21px; }
+  .brief p { font-size: 16px; }
+  .feature__visual { height: 210px; }
+  .feature__body { padding: 22px 22px 26px; }
 }
 
 /* body content at 75% on desktop; the top nav keeps its size */
