@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>포트폴리오 — 세요가 만든 페이지들 | seyo..</title>
+  <meta name="description" content="세요가 실제로 받은 의뢰와 완성된 페이지들. 하루 한 장 사진 캘린더, 팀 태스크 DB.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <script>document.documentElement.classList.add('js')</script>
+  <style>
+    .fit { position: absolute; left: 50%; transform-origin: top center; }
+    @media (max-width: 860px) { .stage { height: 340px; } .stage .float-card, .stage .sticker { display: none; } }
+    .w2-tree svg { position: absolute; }
+    .cellbox { position: absolute; width: 120px; height: 120px; border-radius: 10px; box-shadow: 0 10px 24px rgba(0,0,0,.08); }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html" aria-label="seyo.. 홈"><img src="assets/img/wordmark.svg" alt="seyo.."></a>
+    <nav class="nav__links" aria-label="주요 메뉴">
+      <a href="index.html#about">서비스 소개</a>
+      <a href="index.html#how">제작 과정</a>
+      <a href="works.html" aria-current="page">포트폴리오</a>
+      <a href="index.html#pricing">요금</a>
+      <a class="btn btn--sm" href="index.html#start">무료로 만들어 주세요</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Intro + index -->
+  <section class="section" style="padding-block:120px">
+    <div class="container">
+      <div class="works-head">
+        <div class="section-head" style="margin:0">
+          <span class="eyebrow">포트폴리오</span>
+          <h1 class="h2">세요가 만든 페이지들</h1>
+        </div>
+        <span class="works-count" aria-label="2개">(02)</span>
+      </div>
+      <table class="index">
+        <thead><tr><th>No.</th><th>페이지</th><th>의뢰인</th><th>쓰는 곳</th><th></th></tr></thead>
+        <tbody>
+          <tr data-href="#work-01"><td>01</td><td><a href="#work-01">팀 태스크 DB</a></td><td>5인 창업팀 대표</td><td>웹</td><td><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7 6h7v7" fill="none" stroke="#1d1d1f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+          <tr data-href="#work-02"><td>02</td><td><a href="#work-02">하루 한 장 사진 캘린더</a></td><td>대학생</td><td>아이패드, 웹</td><td><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7 6h7v7" fill="none" stroke="#1d1d1f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Work 01 -->
+  <section class="section" id="work-01">
+    <div class="container project">
+      <header class="reveal">
+        <div class="project__title">
+          <span class="eyebrow">Work 01</span>
+          <h2 class="h1" style="font-size:clamp(30px,3.6vw,48px)">팀 태스크 DB</h2>
+          <p>지라 대신, 5인 창업팀이 매일 쓰는 우리 팀만의 업무 보드</p>
+        </div>
+        <dl class="meta">
+          <div><dt>의뢰인</dt><dd>창업팀 대표</dd></div>
+          <div><dt>만든 것</dt><dd>사내 태스크 관리 웹앱</dd></div>
+          <div><dt>쓰는 사람</dt><dd>대표, PM, BE, FE, DE</dd></div>
+          <div><dt>플랫폼</dt><dd>웹 (데스크톱, 모바일)</dd></div>
+        </dl>
+      </header>
+
+      <div class="stage stage--blue reveal">
+        <div class="fit" data-fit="0.74" data-max="1.3" style="top:70px"><div data-render="board"></div></div>
+        <img class="sticker" src="assets/img/clap.png" alt="" style="left:9%;top:24%;width:64px;height:64px;transform:rotate(-12deg)">
+        <img class="sticker" src="assets/img/fire.png" alt="" style="left:82%;top:6%;width:56px;height:56px;transform:rotate(10deg)">
+        <div class="float-card" style="left:3.3%;top:54%;width:280px">
+          <h5>R&amp;R 현황</h5><small>팀원별 업무 비중</small>
+          <div class="bars">
+            <div class="bar-row"><span>팀장</span><i><b style="width:50%;background:var(--pink)"></b></i><em>25%</em></div>
+            <div class="bar-row"><span>BE</span><i><b style="width:50%;background:var(--blue)"></b></i><em>25%</em></div>
+            <div class="bar-row"><span>PM</span><i><b style="width:50%;background:var(--pink)"></b></i><em>25%</em></div>
+            <div class="bar-row"><span>FE</span><i><b style="width:50%;background:var(--blue)"></b></i><em>25%</em></div>
+            <div class="bar-row"><span>DE</span><i></i><em>배정 없음</em></div>
+          </div>
+        </div>
+        <div class="float-card" style="right:3.3%;top:60%;width:300px">
+          <h5><span class="dot"></span>확인할 것</h5>
+          <p>고르게 나눠져 있고 밀린 업무도 없어요</p>
+          <small>이번 주 업무 4건 중 1건 완료</small>
+        </div>
+      </div>
+
+      <div class="brief reveal">
+        <div><span class="eyebrow">의뢰</span><blockquote>“지라는 팀원들이 너무 복잡해할 것 같았어요.<br>누가 뭘, 언제까지 하는지 쉽게 보고 싶었어요.”</blockquote><cite>창업팀 대표</cite></div>
+        <div><span class="eyebrow">세요가 한 일</span><p>기능을 늘리는 대신, 팀에 꼭 필요한 것만 남겼어요. 팀원별로 맡은 업무와 마감을 한 화면에 보여주고, 끝낸 업무에는 점수와 자기 평가, 산출물 링크가 쌓이게 했어요. 서로 칭찬 스티커를 붙이며 가볍게 챙길 수 있도록요.</p></div>
+      </div>
+
+      <div class="features reveal">
+        <article class="feature">
+          <div class="feature__visual feature__visual--pink">
+            <div class="crop w2-tree tb" style="padding:0;width:420px;height:260px;border:0;box-shadow:var(--shadow-soft)">
+              <div style="position:absolute;left:24px;top:22px;display:flex;gap:10px;align-items:center"><span class="av av--pink" style="width:40px;height:40px;font-size:14px">팀장</span><div><b style="font-size:16px">팀장</b><br><span style="font-size:13px;color:var(--sub)">1점</span></div></div>
+              <svg width="300" height="30" viewBox="0 0 300 30" style="left:24px;top:70px" fill="none" stroke="#d2d2d7" stroke-width="1.2" aria-hidden="true"><path d="M20 0V12H300M20 12V30M180 12V30"/></svg>
+              <div style="position:absolute;left:24px;top:104px;display:grid;gap:10px">
+                <div style="display:flex;gap:8px;align-items:center"><span class="av av--blue" style="width:30px;height:30px">BE</span><b style="font-size:14px">BE</b></div>
+                <div class="task" style="font-size:14px"><i class="mark mark--doing" style="width:20px;height:20px"></i><div>로그인 API 구현<small style="font-size:12px">진행 중  11/27까지</small></div></div>
+              </div>
+              <div style="position:absolute;left:184px;top:104px;display:grid;gap:10px">
+                <div style="display:flex;gap:8px;align-items:center"><span class="av av--blue" style="width:30px;height:30px">FE</span><b style="font-size:14px">FE</b></div>
+                <div class="task" style="font-size:14px"><i class="mark mark--late" style="width:20px;height:20px"></i><div>메인 화면 퍼블리싱<br><span class="late">1일 밀림</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="feature__body"><span>01</span><h3>팀원별 보드</h3><p>누가 뭘, 언제까지 하는지 한 화면에서 보여요. 주간, 월간, 연간으로 바꿔 볼 수 있어요.</p></div>
+        </article>
+        <article class="feature">
+          <div class="feature__visual feature__visual--blue">
+            <div class="crop" style="padding:22px 24px">
+              <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:15px">팀원별 업무</b><span style="padding:6px 10px;border-radius:8px;background:#fff0f0;color:#d70015;font-size:12px;font-weight:600">FE 밀린 업무 1건</span></div>
+              <div style="display:grid;gap:14px;margin-top:20px">
+                <div style="display:grid;grid-template-columns:28px 40px 180px auto;gap:12px;align-items:center;font-size:13px;font-weight:600"><span class="av av--pink" style="width:28px;height:28px;font-size:10px">팀장</span>팀장<i style="height:22px;border-radius:5px;background:#248a3d"></i><em style="font-style:normal;font-weight:400;color:var(--sub);font-size:12px">1건</em></div>
+                <div style="display:grid;grid-template-columns:28px 40px 180px auto;gap:12px;align-items:center;font-size:13px;font-weight:600"><span class="av av--blue" style="width:28px;height:28px;font-size:10px">BE</span>BE<i style="height:22px;border-radius:5px;background:#0071e3"></i><em style="font-style:normal;font-weight:400;color:var(--sub);font-size:12px">1건</em></div>
+                <div style="display:grid;grid-template-columns:28px 40px 180px auto;gap:12px;align-items:center;font-size:13px;font-weight:600"><span class="av av--pink" style="width:28px;height:28px;font-size:10px">PM</span>PM<i style="height:22px;border-radius:5px;background:#0071e3"></i><em style="font-style:normal;font-weight:400;color:var(--sub);font-size:12px">1건</em></div>
+                <div style="display:grid;grid-template-columns:28px 40px 180px auto;gap:12px;align-items:center;font-size:13px;font-weight:600"><span class="av av--blue" style="width:28px;height:28px;font-size:10px">FE</span>FE<i style="height:22px;border-radius:5px;background:#d70015"></i><em style="font-style:normal;font-weight:400;color:var(--sub);font-size:12px">1건</em></div>
+              </div>
+            </div>
+          </div>
+          <div class="feature__body"><span>02</span><h3>R&amp;R 현황</h3><p>업무가 한 사람에게 몰리거나 마감이 밀리면 바로 알려줘요.</p></div>
+        </article>
+        <article class="feature">
+          <div class="feature__visual feature__visual--pink">
+            <div class="crop" style="padding:24px">
+              <div style="display:flex;align-items:center;gap:12px"><span class="av av--pink" style="width:44px;height:44px;font-size:15px">DE</span><div><b style="font-size:16px">DE</b><br><span style="font-size:13px;color:var(--sub)">완료 1건</span></div>
+                <b style="margin-left:auto;margin-right:40px;font-size:38px;letter-spacing:-.02em;line-height:1">1<small style="font-size:16px">점</small></b></div>
+              <p style="margin-top:26px;font-size:13px;font-weight:600;color:var(--sub)">받은 스티커</p>
+              <div style="display:flex;gap:8px;margin-top:10px">
+                <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:#f0f0f2;font-size:13px;font-weight:600;color:var(--sub)"><img src="assets/img/clap.png" alt="수고했어요" width="18" height="18">2</span>
+                <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:#f0f0f2;font-size:13px;font-weight:600;color:var(--sub)"><img src="assets/img/hundred.png" alt="완벽해요" width="18" height="18">1</span>
+                <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:#f0f0f2;font-size:13px;font-weight:600;color:var(--sub)"><img src="assets/img/handshake.png" alt="협업 최고" width="18" height="18">1</span>
+              </div>
+              <img class="sticker" src="assets/img/clap.png" alt="" style="left:200px;top:20px;width:48px;height:48px;transform:rotate(-14deg)">
+              <img class="sticker" src="assets/img/hundred.png" alt="" style="left:236px;top:112px;width:36px;height:36px;transform:rotate(10deg)">
+            </div>
+          </div>
+          <div class="feature__body"><span>03</span><h3>점수와 칭찬 스티커</h3><p>끝낸 업무엔 점수가 쌓이고, 팀원끼리 스티커와 댓글로 챙겨요.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- Work 02 -->
+  <section class="section section--gray" id="work-02">
+    <div class="container project">
+      <header class="reveal">
+        <div class="project__title">
+          <span class="eyebrow">Work 02</span>
+          <h2 class="h1" style="font-size:clamp(30px,3.6vw,48px)">하루 한 장 사진 캘린더</h2>
+          <p>하루에 사진 한 장, 채우기만 하면 끝나는 캘린더</p>
+        </div>
+        <dl class="meta">
+          <div><dt>의뢰인</dt><dd>대학생</dd></div>
+          <div><dt>만든 것</dt><dd>사진 한 장 캘린더</dd></div>
+          <div><dt>쓰는 사람</dt><dd>의뢰인 본인</dd></div>
+          <div><dt>플랫폼</dt><dd>아이패드, 폰, 웹</dd></div>
+        </dl>
+      </header>
+
+      <div class="stage stage--pink reveal">
+        <div class="fit" data-fit="0.9" style="top:60px"><div data-render="calendar" style="box-shadow:var(--shadow-soft);border-radius:20px"></div></div>
+      </div>
+
+      <div class="brief reveal">
+        <div><span class="eyebrow">의뢰</span><blockquote>“하루 한 장 사진으로 채우는 캘린더,<br>iOS Core로 만들어 주세요.”</blockquote><cite>대학생 의뢰인</cite></div>
+        <div><span class="eyebrow">세요가 한 일</span><p>날짜 칸을 누르고 사진 한 장을 고르면 끝이에요. 메모도, 위젯도, 꾸미기 설정도 전부 뺐어요. 한 달이 지나면 달력이 그대로 사진 앨범이 돼요.</p></div>
+      </div>
+
+      <div class="features reveal">
+        <article class="feature">
+          <div class="feature__visual feature__visual--pink">
+            <div class="crop"><div style="position:absolute;left:-223px;top:-187px;transform:scale(.9);transform-origin:top left"><div data-render="calendar"></div></div></div>
+          </div>
+          <div class="feature__body"><span>01</span><h3>사진 캘린더</h3><p>한 달이 사진으로 채워지는 달력. 오늘은 테두리로 표시돼요.</p></div>
+        </article>
+        <article class="feature">
+          <div class="feature__visual feature__visual--blue">
+            <div class="cellbox" style="left:52px;top:65px;background:#fff;outline:2px dashed #1d1d1f;outline-offset:-2px">
+              <span style="position:absolute;left:12px;top:8px;font-weight:500">16</span>
+              <svg width="28" height="28" viewBox="0 0 28 28" style="position:absolute;left:46px;top:46px" aria-hidden="true"><path d="M14 5v18M5 14h18" stroke="#1d1d1f" stroke-width="2.4" stroke-linecap="round"/></svg>
+            </div>
+            <svg width="56" height="20" viewBox="0 0 56 20" style="position:absolute;left:164px;top:115px" aria-hidden="true"><path d="M2 10h48M42 3l8 7-8 7" fill="none" stroke="#86868b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="cellbox" style="left:212px;top:65px;background:linear-gradient(135deg,#cfe2f6,#f3dcec);outline:2px solid #1d1d1f;outline-offset:-2px"></div>
+          </div>
+          <div class="feature__body"><span>02</span><h3>하루 한 장이면 끝</h3><p>오늘 칸을 누르고 사진을 고르면 채워져요. 그게 전부예요.</p></div>
+        </article>
+        <article class="feature">
+          <div class="feature__visual feature__visual--pink">
+            <div style="position:absolute;left:-18px;top:30px;width:1100px;transform:scale(.38);transform-origin:top left">
+              <div class="devices" style="background:transparent">
+                <div class="device device--ipad"><div class="device__screen"><b></b><b></b><b></b><b></b></div></div>
+                <div class="device device--laptop"><div class="device__screen"><b></b><b></b><b></b><b></b></div></div>
+                <div class="laptop-base"></div>
+                <div class="device device--phone"><div class="device__screen"><b></b><b></b><b></b><b></b></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="feature__body"><span>03</span><h3>어디서든</h3><p>아이패드와 폰, 웹 어디서든 같은 화면을 열어요.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <img src="assets/img/wordmark-white.svg" alt="seyo..">
+    <nav aria-label="푸터"><a href="#">이용약관</a><a href="#">개인정보처리방침</a><a href="mailto:">문의하기</a><span>© 2026 SEYO</span></nav>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=3"></script>
+</body>
+</html>

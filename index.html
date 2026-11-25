@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>seyo.. — 딱 맞는 페이지가 없다면, 그냥 말하세요</title>
+  <meta name="description" content="속지 고르고 위젯 배치하는 대신, 말하세요. 하루 만에 나만의 페이지가 생겨요. 개인은 평생 무료.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html" aria-label="seyo.. 홈"><img src="assets/img/wordmark.svg" alt="seyo.."></a>
+    <nav class="nav__links" aria-label="주요 메뉴">
+      <a href="#about">서비스 소개</a>
+      <a href="#how">제작 과정</a>
+      <a href="works.html">포트폴리오</a>
+      <a href="#pricing">요금</a>
+      <a class="btn btn--sm" href="#start">무료로 만들어 주세요</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero: the cover is one big speech bubble; the title answers it -->
+  <section class="hero">
+    <div class="cover" aria-hidden="true">
+      <div class="cover__clip">
+        <span class="bubble" style="left:4%;top:21%;--r:-5deg">독서기록장, 문장 수집도 되게 해주세요 ♡</span>
+        <span class="bubble" style="left:38.5%;top:15.5%;--r:4deg">노션 꾸미다가 공부는 못 했어</span>
+        <span class="bubble" style="left:71.5%;top:26.5%;--r:-6deg">최애 생일 캘린더 만들어 주세요</span>
+        <span class="bubble" style="left:19.8%;top:51.5%;--r:6deg">시험기간 공부 플래너 만들어 주세요</span>
+        <span class="bubble" style="left:57.2%;top:57%;--r:-3deg">새 앱 또 처음부터 배워야 해?</span>
+        <span class="bubble" style="left:80.9%;top:64%;--r:5deg">팀 업무 보드도 되나요?</span>
+      </div>
+      <svg class="cover__tail" viewBox="0 0 96 70"><path d="M0 0H96C70 8 46 30 30 70C30 40 18 14 0 0Z" fill="#e8f0fa"/></svg>
+    </div>
+
+    <div class="container hero__col">
+      <div class="hero__icon" data-render="star" data-stroke="0.26"></div>
+      <h1 class="h1">딱 맞는 페이지가 없다면,<br>그냥 말하세요</h1>
+      <p class="lead">속지 고르고 위젯 배치하는 대신, 말하세요. 하루 만에 나만의 페이지가 생겨요.</p>
+      <div class="callout" id="start">
+        <span data-render="star" data-stroke="0.6" style="width:24px;height:24px;display:block"></span>
+        <p>“이런 거 만들어 주세요” 한마디면 충분해요.</p>
+        <a class="btn" href="#how">만들어 주세요</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What seyo does (orbit) -->
+  <section class="section orbit" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">세요가 하는 일</span>
+        <h2 class="h2"><span class="muted">고르고 배우는 건 그만.</span><br>말하면, 나만의 기록장이 생겨요.</h2>
+      </div>
+      <div class="orbit__stage reveal">
+        <div class="sphere">
+          <span data-render="star" style="position:absolute;width:200px;height:200px"></span>
+          <div class="sphere__text"><img src="assets/img/wordmark.svg" alt="seyo.."><span>Say + 해주세요</span></div>
+        </div>
+        <span class="pill pill--on" style="left:12.5%;top:16%">말로 하는 의뢰</span>
+        <span class="pill pill--on" style="left:68%;top:12.5%">1일 안에 완성</span>
+        <span class="pill pill--on" style="left:11%;top:69.5%">내 감성 그대로</span>
+        <span class="pill pill--on" style="left:66%;top:68%">수정도 말 한마디로</span>
+        <span class="pill pill--off" style="left:5%;top:43%">속지 고르기</span>
+        <span class="pill pill--off" style="left:75%;top:41%">위젯 하나하나 배치</span>
+        <span class="pill pill--off" style="left:27.5%;top:89%">노션 템플릿 세팅</span>
+        <span class="pill pill--off" style="left:56.5%;top:90%">새 앱 사용법 공부</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works: just the request window -->
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">제작 과정</span>
+        <h2 class="h2">의뢰부터 사용까지, 단 하루</h2>
+        <p class="lead">기획서도, 디자인도 필요 없어요.</p>
+      </div>
+      <div class="window reveal" role="img" aria-label="새 의뢰 대화 예시">
+        <div class="window__bar"><i></i><i></i><i></i><span>새 의뢰</span></div>
+        <div class="chat">
+          <p class="msg msg--me">독서기록장 만들어 주세요! 읽은 책이랑 밑줄 친 문장,<br>별점까지 한 번에, 연보라 감성으로요 ♡</p>
+          <div class="msg msg--seyo">
+            좋아요! 이렇게 만들어서 내일 오후 3시에 보내 드릴게요.
+            <div class="chips"><span class="chip chip--pink">책 등록</span><span class="chip" style="background:#f6f1cc">문장 수집</span><span class="chip chip--blue">별점</span><span class="chip" style="background:#e9f1ec">월별 통계</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Anywhere -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">어디서든</span>
+        <h2 class="h2"><span class="muted">앱으로도, 웹으로도.</span><br>폰, 컴퓨터, 아이패드 어디서든.</h2>
+      </div>
+      <div class="devices reveal" role="img" aria-label="아이패드, 컴퓨터, 폰에서 같은 페이지를 여는 모습">
+        <div class="device device--ipad"><div class="device__screen"><b></b><b></b><b></b><b></b></div></div>
+        <div class="device device--laptop"><div class="device__screen"><b></b><b></b><b></b><b></b></div></div>
+        <div class="laptop-base"></div>
+        <div class="device device--phone"><div class="device__screen"><b></b><b></b><b></b><b></b></div></div>
+      </div>
+      <div class="tags"><span class="tag tag--blue">앱</span><span class="tag tag--blue">웹</span><span class="tag tag--pink">폰</span><span class="tag tag--pink">컴퓨터</span><span class="tag tag--pink">아이패드</span></div>
+    </div>
+  </section>
+
+  <!-- Portfolio teaser -->
+  <section class="section">
+    <div class="container teaser">
+      <div class="teaser__text reveal">
+        <span class="eyebrow">포트폴리오</span>
+        <h2 class="h2">세요가 만든 페이지들</h2>
+        <p class="lead">실제로 받은 의뢰와 완성된 페이지를 소개합니다 !</p>
+        <a class="btn" href="works.html">보러가기 <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14L14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <a class="teaser__thumbs reveal" href="works.html" aria-label="포트폴리오 보러가기">
+        <div class="thumb thumb--1"><div class="thumb__inner" style="transform:scale(.32)"><div data-render="calendar"></div></div></div>
+        <div class="thumb thumb--2"><div class="thumb__inner" style="transform:scale(.56)"><div data-render="board"></div></div></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section section--gray" id="pricing">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">요금</span>
+        <h2 class="h2">혼자 쓰면 무료, 함께 쓰면 합리적으로</h2>
+        <p class="lead">개인 도구는 비용 없이, 여러 명이 함께 쓰는 팀 도구만 월 요금이 붙어요.</p>
+      </div>
+      <div class="plans reveal">
+        <article class="plan">
+          <div class="plan__top">개인</div>
+          <div class="plan__price">0원<small>평생 무료</small></div>
+          <p class="plan__desc">혼자 쓰는 나만의 도구라면 비용 없이 의뢰하세요.</p>
+          <hr>
+          <ul><li>앱 의뢰 및 1일 안에 제작</li><li>말로 하는 수정 요청</li><li>아이패드, 웹에서 바로 사용</li><li>내 데이터 내보내기</li></ul>
+          <a class="btn btn--ghost" href="#start">무료로 만들어 주세요</a>
+        </article>
+        <article class="plan plan--team">
+          <div class="plan__top">팀 <span class="plan__badge">2인 이상 함께 쓸 때</span></div>
+          <div class="plan__price">월 19,900원~</div>
+          <p class="plan__desc">엑셀 공유 시트 대신, 팀 전용 도구로 함께 쓰세요.<br>새 협업툴 도입, 교육 비용 없이 시작해요.</p>
+          <hr>
+          <ul><li>개인 플랜의 모든 기능</li><li>팀원 초대 및 권한 관리</li><li>실시간 공동 사용, 데이터 동기화</li><li>팀 전용 데이터 보관, 자동 백업</li></ul>
+          <a class="btn btn--light" href="#start">팀 도구 만들어 주세요</a>
+        </article>
+      </div>
+      <p class="note">* 팀 요금은 5인까지 월 19,900원부터이며, 인원과 기능 규모에 따라 달라져요.</p>
+    </div>
+  </section>
+
+  <!-- Ending -->
+  <section class="ending">
+    <p class="ending__label">Say it, seyo..</p>
+    <div class="lockup"><span data-render="star" style="position:absolute;height:100%;aspect-ratio:1"></span><img src="assets/img/wordmark.svg" alt="seyo.."></div>
+    <a class="btn" href="#start">만들어 주세요</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <img src="assets/img/wordmark-white.svg" alt="seyo..">
+    <nav aria-label="푸터"><a href="#">이용약관</a><a href="#">개인정보처리방침</a><a href="mailto:">문의하기</a><span>© 2026 SEYO</span></nav>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=3"></script>
+</body>
+</html>
