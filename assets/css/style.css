@@ -287,12 +287,28 @@ button { font: inherit; }
   .js .reveal.is-in { opacity: 1; transform: none; }
 }
 
-/* "세요" highlight: white (hidden) by default, a pink→blue marker sweeps in when it scrolls into view */
-.seyo { border-radius: .12em; padding: 0 .04em; background: linear-gradient(90deg, var(--pink), var(--blue)) no-repeat 0 88% / 100% 42%; }
-@media (prefers-reduced-motion: no-preference) {
-  .js .seyo { color: #fff; background-size: 0% 42%; transition: background-size .9s cubic-bezier(.22, 1, .36, 1), color .5s ease .25s; }
-  .js .seyo.is-on { color: inherit; background-size: 100% 42%; }
+/* "세요": letters pop in one by one and shimmer pink↔blue; headings also get a marker sweep */
+.seyo { display: inline-block; white-space: nowrap; }
+.seyo i {
+  display: inline-block; font-style: normal;
+  background: linear-gradient(90deg, #e27fa6, #6f9fe2, #e27fa6) 0 0 / 200% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
 }
+.btn .seyo i, .msg--me .seyo i, .plan--team .seyo i { background-image: linear-gradient(90deg, #ffd3e3, #cfe2ff, #ffd3e3); }
+.btn--ghost .seyo i, .btn--light .seyo i { background-image: linear-gradient(90deg, #e27fa6, #6f9fe2, #e27fa6); }
+.h1 .seyo, .h2 .seyo, .eyebrow .seyo { border-radius: .12em; background: linear-gradient(90deg, var(--pink), var(--blue)) no-repeat 0 88% / 100% 40%; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .seyo i { opacity: 0; transform: translateY(.55em) scale(.7) rotate(-8deg); }
+  .js .seyo.is-on i { animation: seyo-pop .75s cubic-bezier(.34, 1.56, .64, 1) calc(var(--i) * 110ms) both, seyo-shimmer 4s ease-in-out calc(.8s + var(--i) * 110ms) infinite alternate; }
+  .js .h1 .seyo, .js .h2 .seyo, .js .eyebrow .seyo { background-size: 0% 40%; transition: background-size .9s cubic-bezier(.22, 1, .36, 1) .2s; }
+  .js .h1 .seyo.is-on, .js .h2 .seyo.is-on, .js .eyebrow .seyo.is-on { background-size: 100% 40%; }
+}
+@keyframes seyo-pop {
+  0% { opacity: 0; transform: translateY(.55em) scale(.7) rotate(-8deg); }
+  60% { opacity: 1; transform: translateY(-.14em) scale(1.08) rotate(3deg); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes seyo-shimmer { from { background-position: 0 0; } to { background-position: 100% 0; } }
 
 /* ───────── responsive ───────── */
 @media (max-width: 1100px) {

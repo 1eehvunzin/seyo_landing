@@ -101,12 +101,29 @@
     tr.addEventListener('click', () => { location.href = tr.dataset.href; });
   });
 
-  /* ---------- "세요" highlight ---------- */
+  /* ---------- "세요": wrap every occurrence, animate on scroll ---------- */
+  const walker = document.createTreeWalker(document.querySelector('main'), NodeFilter.SHOW_TEXT, {
+    acceptNode: n => (n.nodeValue.includes('세요') && !n.parentElement.closest('script, style, svg, .seyo'))
+      ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT,
+  });
+  const hits = [];
+  while (walker.nextNode()) hits.push(walker.currentNode);
+  hits.forEach(node => {
+    const frag = document.createDocumentFragment();
+    node.nodeValue.split(/(세요)/).forEach(part => {
+      if (part !== '세요') { if (part) frag.append(part); return; }
+      const s = document.createElement('span');
+      s.className = 'seyo';
+      s.innerHTML = '<i style="--i:0">세</i><i style="--i:1">요</i>';
+      frag.append(s);
+    });
+    node.replaceWith(frag);
+  });
   const seyos = document.querySelectorAll('.seyo');
   if ('IntersectionObserver' in window) {
     const so = new IntersectionObserver(entries => entries.forEach(e => {
-      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('is-on'), 250); so.unobserve(e.target); }
-    }), { rootMargin: '0px 0px -20% 0px', threshold: 1 });
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('is-on'), 200); so.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -12% 0px' });
     seyos.forEach(el => so.observe(el));
   } else {
     seyos.forEach(el => el.classList.add('is-on'));
