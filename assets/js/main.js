@@ -114,6 +114,9 @@
       if (part !== '세요') { if (part) frag.append(part); return; }
       const s = document.createElement('span');
       s.className = 'seyo';
+      // gradient-filled text renders optically thinner, so nudge the variable weight up to match its neighbours
+      const w = Math.min(900, (parseInt(getComputedStyle(node.parentElement).fontWeight, 10) || 400) + 60);
+      s.style.fontWeight = w;
       s.innerHTML = '<i style="--i:0">세</i><i style="--i:1">요</i>';
       frag.append(s);
     });
