@@ -140,12 +140,14 @@
   /* ---------- analytics: request-form CTA clicks → dataLayer (GTM) ---------- */
   document.querySelectorAll('a[href*="docs.google.com/forms"]').forEach(a => {
     a.addEventListener('click', () => {
-      (window.dataLayer = window.dataLayer || []).push({
-        event: 'cta_click',
+      const params = {
         cta_text: a.textContent.trim(),
         cta_location: (a.closest('section, header, footer') || {}).id || a.closest('section, header, footer')?.className || 'unknown',
         page_path: location.pathname,
-      });
+      };
+      (window.dataLayer = window.dataLayer || []).push({ event: 'cta_click', ...params });
+      // GA4 (G-ZCEEF0C6TZ) via gtag.js; link opens in a new tab so beacon delivery is safe
+      if (typeof window.gtag === 'function') window.gtag('event', 'cta_click', { ...params, transport_type: 'beacon' });
     });
   });
 
