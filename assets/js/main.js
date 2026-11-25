@@ -135,6 +135,18 @@
     seyos.forEach(el => el.classList.add('is-on'));
   }
 
+  /* ---------- analytics: request-form CTA clicks → dataLayer (GTM) ---------- */
+  document.querySelectorAll('a[href*="docs.google.com/forms"]').forEach(a => {
+    a.addEventListener('click', () => {
+      (window.dataLayer = window.dataLayer || []).push({
+        event: 'cta_click',
+        cta_text: a.textContent.trim(),
+        cta_location: (a.closest('section, header, footer') || {}).id || a.closest('section, header, footer')?.className || 'unknown',
+        page_path: location.pathname,
+      });
+    });
+  });
+
   /* ---------- reveal ---------- */
   const els = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
